@@ -13,7 +13,17 @@ const MarketplaceSection: React.FC<MarketplaceSectionProps> = ({
   viewPortfolioDetails,
 }) => {
   return (
-    <section id="marketplace" className="py-20 relative">
+    <section
+      id="marketplace"
+      className="py-20 relative"
+      style={{
+        background:
+          "linear-gradient(135deg, #0a0e1a 0%, #1a1f2e 25%, #2a3f5f 50%, #1e3a8a 75%, #0f172a 100%)",
+        position: "relative",
+        overflow: "hidden",
+      }}
+    >
+      <div className="glass-bg"></div>
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div
           data-animate="true"
@@ -38,7 +48,7 @@ const MarketplaceSection: React.FC<MarketplaceSectionProps> = ({
               key={portfolio.id}
               data-animate="true"
               id={`portfolio-${portfolio.id}`}
-              className={`backdrop-blur-md bg-white/5 rounded-3xl overflow-hidden border border-white/10 transition-all duration-1000 hover:scale-105 hover:shadow-2xl hover:shadow-cyan-500/10 ${
+              className={`backdrop-blur-md bg-white/5 rounded-3xl overflow-hidden border border-white/10 transition-all duration-1000 hover:scale-100 hover:shadow-2xl hover:shadow-cyan-500/10 service-card ${
                 visibleElements.has(`portfolio-${portfolio.id}`)
                   ? "opacity-100 translate-y-0"
                   : "opacity-0 translate-y-12"
@@ -99,6 +109,37 @@ const MarketplaceSection: React.FC<MarketplaceSectionProps> = ({
           </button>
         </div>
       </div>
+      <style>{`
+        .service-card {
+          background: rgba(255, 255, 255, 0.05);
+          backdrop-filter: blur(20px);
+          border: 1px solid rgba(59, 130, 246, 0.2);
+          border-radius: 20px;
+          padding: 2.5rem 1.5rem;
+          position: relative;
+          overflow: hidden;
+          transition: all 0.4s cubic-bezier(.4,2,.6,1);
+        }
+        .service-card::before {
+          content: '';
+          position: absolute;
+          top: 0;
+          left: 0;
+          width: 100%;
+          height: 2px;
+          background: linear-gradient(90deg, #3b82f6, #1d4ed8, #1e40af);
+          transform: scaleX(0);
+          transition: transform 0.4s cubic-bezier(.4,2,.6,1);
+        }
+        .service-card:hover::before {
+          transform: scaleX(1);
+        }
+        .service-card:hover {
+          transform: translateY(-10px) scale(1.05);
+          background: rgba(59, 130, 246, 0.1);
+          box-shadow: 0 20px 40px rgba(59, 130, 246, 0.2);
+        }
+      `}</style>
     </section>
   );
 };

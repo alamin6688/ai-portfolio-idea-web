@@ -45,8 +45,8 @@ const Banner3D: React.FC = () => {
     <>
       <style>{`
         .hero-section { height: 100vh; position: relative; overflow: hidden; background: linear-gradient(135deg, #0a0e1a 0%, #1a1f2e 25%, #2a3f5f 50%, #1e3a8a 75%, #0f172a 100%); }
-        .glass-bg { position: absolute; top: 0; left: 0; width: 100%; height: 100%; background: radial-gradient(circle at 30% 20%, rgba(59,130,246,0.15) 0%, transparent 50%), radial-gradient(circle at 70% 80%, rgba(147,197,253,0.1) 0%, transparent 50%), radial-gradient(circle at 50% 50%, rgba(30,58,138,0.05) 0%, transparent 50%); backdrop-filter: blur(1px); }
-        .liquid-orb { position: absolute; border-radius: 50%; background: radial-gradient(circle at 30% 30%, rgba(59,130,246,0.3) 0%, rgba(37,99,235,0.2) 50%, rgba(30,58,138,0.1) 100%); backdrop-filter: blur(20px); border: 1px solid rgba(59,130,246,0.2); animation: float 6s ease-in-out infinite; }
+        .glass-bg { position: absolute; top: 0; left: 0; width: 100%; height: 100%; background: radial-gradient(circle at 30% 20%, rgba(59,130,246,0.15) 0%, transparent 50%), radial-gradient(circle at 70% 80%, rgba(147,197,253,0.1) 0%, transparent 50%), radial-gradient(circle at 50% 50%, rgba(30,58,138,0.05) 0%, transparent 50%); backdrop-filter: blur(2.5px) saturate(1.5) brightness(1.1); }
+        .liquid-orb { position: absolute; border-radius: 50%; background: radial-gradient(circle at 30% 30%, rgba(59,130,246,0.3) 0%, rgba(37,99,235,0.2) 50%, rgba(30,58,138,0.1) 100%); backdrop-filter: blur(30px) saturate(1.5); border: 1px solid rgba(59,130,246,0.2); animation: float 6s ease-in-out infinite; box-shadow: 0 8px 40px 0 rgba(59,130,246,0.12); }
         .orb-1 { width: 300px; height: 300px; top: 10%; left: 15%; animation-delay: 0s; }
         .orb-2 { width: 200px; height: 200px; top: 60%; right: 20%; animation-delay: 2s; }
         .orb-3 { width: 150px; height: 150px; top: 30%; right: 10%; animation-delay: 4s; }

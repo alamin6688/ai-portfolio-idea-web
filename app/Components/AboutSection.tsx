@@ -25,7 +25,17 @@ interface AboutSectionProps {
 
 const AboutSection: React.FC<AboutSectionProps> = ({ visibleElements }) => {
   return (
-    <section id="about" className="py-20 relative">
+    <section
+      id="about"
+      className="py-20 relative"
+      style={{
+        background:
+          "linear-gradient(135deg, #0a0e1a 0%, #1a1f2e 25%, #2a3f5f 50%, #1e3a8a 75%, #0f172a 100%)",
+        position: "relative",
+        overflow: "hidden",
+      }}
+    >
+      <div className="glass-bg"></div>
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
         <div
           data-animate="true"
